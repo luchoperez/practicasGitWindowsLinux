@@ -30,4 +30,11 @@ $ git log --since=2.weeks
 
 =================================================================================================================================================
 
+Modificando tu última confirmación
+Uno de los casos más comunes en el que quieres deshacer cambios es cuando confirmas demasiado pronto y te olvidas de añadir algún archivo, o te confundes al introducir el mensaje de confirmación. Si quieres volver a hacer la confirmación, puedes ejecutar un commit con la opción --amend:
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+=================================================================================================================================================
+
 Recuerda que siempre es mejor leer la documentacion ofial SIEMPRE
