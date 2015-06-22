@@ -62,6 +62,25 @@ $ git status
 #
 #       modified:   benchmarks.rb
 #
+
+Deshaciendo la modificación de un archivo
+¿Qué pasa si te das cuenta de que no quieres mantener las modificaciones que has hecho sobre el archivo benchmarks.rb? ¿Cómo puedes deshacerlas fácilmente —revertir el archivo al mismo estado en el que estaba cuando hiciste tu última confirmación (o cuando clonaste el repositorio, o como quiera que metieses el archivo en tu directorio de trabajo)? Afortunadamente, git status también te dice como hacer esto.
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   benchmarks.rb
+#
+
+Te dice de forma bastante explícita cómo descartar las modificaciones que hayas hecho, Vamos a hacer lo que dice:
+$ git checkout -- benchmarks.rb
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   README.txt
+#
 =================================================================================================================================================
 
 Recuerda que siempre es mejor leer la documentacion ofial SIEMPRE
