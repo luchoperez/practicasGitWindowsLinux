@@ -35,6 +35,33 @@ Uno de los casos más comunes en el que quieres deshacer cambios es cuando confi
 $ git commit -m 'initial commit'
 $ git add forgotten_file
 $ git commit --amend
+
+Deshaciendo la preparación de un archivo
+El comando git status te lo recuerda:
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   README.txt
+#       modified:   benchmarks.rb
+
+Justo debajo de la cabecera “Cambios a confirmar” (“Changes to be committed”), dice que uses git reset HEAD <archivo>... para sacar un archivo del área de preparación. Vamos a aplicar ese consejo sobre benchmarks.rb:
+$ git reset HEAD benchmarks.rb
+benchmarks.rb: locally modified
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   README.txt
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#       modified:   benchmarks.rb
+#
 =================================================================================================================================================
 
 Recuerda que siempre es mejor leer la documentacion ofial SIEMPRE
